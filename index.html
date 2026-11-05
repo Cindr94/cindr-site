@@ -12,7 +12,7 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;800&family=Inter:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
 <style>
   :root {
     --ink: #141414;
@@ -21,8 +21,9 @@
     --line: #e2e0dc;
     --paper: #ffffff;
     --paper-2: #f6f5f2;
-    --ember: #b8410f;
-    --max: 1080px;
+    --ember: #b5603a;
+    --max: 1180px;
+    --ember-bright: #df8f66;
   }
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
@@ -56,6 +57,60 @@
   .btn.ghost:hover { background: var(--paper-2); }
   .ids { margin-top: 48px; display: flex; gap: 32px; flex-wrap: wrap; font-size: 13px; color: var(--muted); }
   .ids b { color: var(--ink); font-weight: 600; font-variant-numeric: tabular-nums; }
+
+
+  /* ---------- Bold hero ---------- */
+  .bold { background: #101010; color: #fff; min-height: 100svh; display: flex; flex-direction: column; position: relative; overflow: hidden; }
+  .bold::before { content: ""; position: absolute; inset: 0; background:
+      linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px) 0 0 / 80px 80px,
+      linear-gradient(0deg, rgba(255,255,255,.045) 1px, transparent 1px) 0 0 / 80px 80px;
+      mask-image: linear-gradient(180deg, transparent 0%, #000 30%, #000 70%, transparent 100%); pointer-events: none; }
+  .bold > * { position: relative; }
+  .bold > .wrap { width: 100%; }
+  .bnav { display: flex; align-items: center; justify-content: space-between; padding-block: 28px; gap: 16px; }
+  .blogo { font-family: "Barlow Condensed", Impact, sans-serif; font-weight: 800; font-size: 26px; line-height: .9; text-transform: uppercase; text-decoration: none; color: #fff; }
+  .blogo span { display: block; color: var(--ember-bright); }
+  .bnav ul { list-style: none; display: flex; gap: 36px; margin: 0; padding: 0; font-size: 15px; }
+  .bnav ul a { color: rgba(255,255,255,.75); text-decoration: none; }
+  .bnav ul a:hover { color: #fff; }
+  @media (max-width: 720px) { .bnav ul { display: none; } }
+  .bmain { flex: 1; display: grid; grid-template-columns: 1.9fr 1fr; gap: 48px; align-items: end; padding-block: 6vh 4vh; }
+  .bh1 { font-family: "Barlow Condensed", Impact, sans-serif; font-weight: 800; text-transform: uppercase; font-size: clamp(54px, 8.6vw, 136px); line-height: .84; letter-spacing: -.01em; margin: 0; }
+  .bh1 .l { display: block; overflow: hidden; }
+  .bh1 .l > span { display: block; animation: rise .9s cubic-bezier(.16,1,.3,1) both; }
+  .bh1 .l:nth-child(2) > span { animation-delay: .1s; color: var(--ember-bright); padding-left: .45em; }
+  .bh1 .l:nth-child(3) > span { animation-delay: .2s; }
+  @keyframes rise { from { transform: translateY(105%); } to { transform: none; } }
+  @keyframes fade { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+  .bside { animation: fade .8s .45s cubic-bezier(.16,1,.3,1) both; padding-bottom: 12px; }
+  .bside p { font-size: 18px; line-height: 1.5; color: rgba(255,255,255,.82); margin: 0 0 28px; max-width: 36ch; }
+  .bids { border-top: 1px solid rgba(255,255,255,.18); }
+  .bids div { display: flex; justify-content: space-between; gap: 16px; padding: 11px 0; border-bottom: 1px solid rgba(255,255,255,.18); font-size: 14px; }
+  .bids dt { color: rgba(255,255,255,.55); }
+  .bids dd { margin: 0; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .bfoot { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding-block: 28px 40px; border-top: 1px solid rgba(255,255,255,.12); animation: fade .8s .6s cubic-bezier(.16,1,.3,1) both; flex-wrap: wrap; }
+  .bloc { font-family: "Barlow Condensed", Impact, sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; font-size: 16px; color: rgba(255,255,255,.7); }
+  .bloc b { color: #fff; font-weight: 600; }
+  .pill { display: inline-flex; align-items: center; gap: 14px; background: var(--ember-bright); color: #101010; text-decoration: none; font-weight: 600; font-size: 15px; padding: 8px 8px 8px 26px; border-radius: 999px; transition: transform .2s ease; }
+  .pill:hover { transform: translateY(-2px); }
+  .pill i { width: 40px; height: 40px; border-radius: 50%; background: #101010; display: grid; place-items: center; transition: transform .3s ease; }
+  .pill:hover i { transform: rotate(-45deg); }
+  .pill svg { width: 16px; height: 16px; }
+  @media (max-width: 900px) { .bmain { grid-template-columns: 1fr; align-items: start; gap: 36px; } }
+  @media (prefers-reduced-motion: reduce) { .bh1 .l > span, .bside, .bfoot { animation: none; } }
+
+  .bold > .wrap { z-index: 1; }
+  .bold::after { content: ""; position: absolute; left: -10%; right: -10%; bottom: -1px; height: 70%; pointer-events: none; z-index: 0;
+      background:
+        radial-gradient(60% 55% at 72% 100%, rgba(223,143,102,.20), rgba(223,143,102,0) 70%),
+        radial-gradient(45% 40% at 30% 100%, rgba(184,90,50,.13), rgba(184,90,50,0) 70%),
+        radial-gradient(90% 30% at 50% 100%, rgba(240,170,120,.07), rgba(240,170,120,0) 80%);
+      animation: smolder 9s ease-in-out infinite alternate; }
+  @keyframes smolder { from { opacity: .85; } to { opacity: 1; } }
+  @media (prefers-reduced-motion: reduce) { .bold::after { animation: none; } }
+  .data th { color: var(--muted); }
+  h2 { font-family: "Barlow Condensed", Impact, sans-serif !important; font-weight: 800 !important; text-transform: uppercase; letter-spacing: 0; font-size: clamp(34px, 4.6vw, 52px) !important; line-height: .95 !important; }
+  .approach .n { font-family: "Barlow Condensed", Impact, sans-serif !important; font-weight: 800; font-size: 34px !important; }
 
   /* Sections */
   section { padding-block: 80px; border-bottom: 1px solid var(--line); }
@@ -118,9 +173,9 @@
 </head>
 <body>
 
-<header>
-  <div class="wrap nav">
-    <a class="brand" href="#top"><span class="mark" aria-hidden="true"></span>CINDR GROUP</a>
+<div class="bold" id="top">
+  <div class="wrap bnav">
+    <a class="blogo" href="#top">Cindr<span>Group</span></a>
     <ul>
       <li><a href="#capabilities">Capabilities</a></li>
       <li><a href="#approach">Approach</a></li>
@@ -128,27 +183,29 @@
       <li><a href="#contact">Contact</a></li>
     </ul>
   </div>
-</header>
-
-<main id="top">
-  <div class="hero">
-    <div class="wrap">
-      <p class="eyebrow">Federal Contracting · Salt Lake Valley, Utah</p>
-      <h1>Lodging and logistics support for federal missions.</h1>
-      <p class="lede">Cindr Group LLC is a Utah-based small business that provides long-term lodging, travel arrangements, and procurement support to government agencies, with one accountable point of contact from quote to closeout.</p>
-      <div class="actions">
-        <a class="btn primary" href="#contact">Contact Us</a>
-        <a class="btn ghost" href="#company">Company Data</a>
-      </div>
-      <div class="ids">
-        <span>UEI <b>Y7DQEFDR9S95</b></span>
-        <span>CAGE <b>26BS2</b></span>
-        <span>Primary NAICS <b>721110</b></span>
-        <span><b>Small Business</b></span>
-      </div>
+  <div class="wrap bmain">
+    <h1 class="bh1">
+      <span class="l"><span>Lodging &amp;</span></span>
+      <span class="l"><span>Logistics</span></span>
+      <span class="l"><span>For Federal Missions</span></span>
+    </h1>
+    <div class="bside">
+      <p>A Utah-based small business providing long-term lodging, travel arrangements, and procurement support to government agencies nationwide, with one accountable point of contact.</p>
+      <dl class="bids">
+        <div><dt>UEI</dt><dd>Y7DQEFDR9S95</dd></div>
+        <div><dt>CAGE</dt><dd>26BS2</dd></div>
+        <div><dt>Primary NAICS</dt><dd>721110</dd></div>
+        <div><dt>Size</dt><dd>Small Business</dd></div>
+      </dl>
     </div>
   </div>
+  <div class="wrap bfoot">
+    <span class="bloc">Based in Utah &nbsp;·&nbsp; <b>Serving Federal Agencies Nationwide</b></span>
+    <a class="pill" href="#contact">Get in touch <i><svg viewBox="0 0 16 16" fill="none" stroke="#fff" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></i></a>
+  </div>
+</div>
 
+<main>
   <section id="capabilities">
     <div class="wrap">
       <div class="section-head">
@@ -212,8 +269,8 @@
         </div>
         <div>
           <div class="n">03</div>
-          <h3>Local presence</h3>
-          <p>Based in the Salt Lake Valley, near Camp W.G. Williams and Salt Lake City.</p>
+          <h3>Anywhere the mission is</h3>
+          <p>Based in Utah, we source and manage properties and suppliers wherever the requirement is located.</p>
         </div>
         <div>
           <div class="n">04</div>
@@ -266,7 +323,7 @@
         <p class="role">Managing Director</p>
         <p><a href="mailto:alex@cindrgroup.com">alex@cindrgroup.com</a></p>
         <p><a href="tel:+18479465783">(847) 946-5783</a></p>
-        <p style="color:var(--muted)">Midvale, Utah</p>
+        <p style="color:var(--muted)">Midvale, Utah · Serving clients nationwide</p>
       </div>
     </div>
   </section>

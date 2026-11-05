@@ -147,6 +147,17 @@
   @media (max-width: 860px) { .approach { grid-template-columns: 1fr 1fr; } }
   @media (max-width: 520px) { .approach { grid-template-columns: 1fr; } }
 
+
+  /* Experience */
+  .xp { display: grid; grid-template-columns: 1fr 2fr; gap: 40px; }
+  .xp-list { border-top: 1px solid var(--ink); }
+  .xp-item { display: grid; grid-template-columns: 120px 1fr; gap: 24px; padding: 20px 0; border-bottom: 1px solid var(--line); }
+  .xp-item .yr { font-family: "Barlow Condensed", Impact, sans-serif; font-weight: 600; font-size: 18px; letter-spacing: .04em; color: var(--ember); }
+  .xp-item h3 { font-size: 16px; font-weight: 600; margin: 0 0 6px; }
+  .xp-item p { margin: 0; font-size: 15px; color: var(--ink-2); }
+  .xp-note { font-size: 14px; color: var(--muted); margin: 18px 0 0; }
+  @media (max-width: 760px) { .xp { grid-template-columns: 1fr; gap: 8px; } .xp-item { grid-template-columns: 1fr; gap: 6px; } }
+
   /* Company data */
   .data { background: var(--paper-2); }
   .table-wrap { overflow-x: auto; }
@@ -179,6 +190,7 @@
     <ul>
       <li><a href="#capabilities">Capabilities</a></li>
       <li><a href="#approach">Approach</a></li>
+      <li><a href="#experience">Experience</a></li>
       <li><a href="#company">Company Data</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -281,6 +293,44 @@
     </div>
   </section>
 
+  <section id="experience">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Experience</h2>
+        <p>Cindr Group is led by Managing Director Alex Bonds, who brings hands-on experience running large commercial projects: managing schedules, crews, billing, and coordination with general contractors.</p>
+      </div>
+      <div class="xp">
+        <div></div>
+        <div>
+          <div class="xp-list">
+            <div class="xp-item">
+              <span class="yr">2024–2026</span>
+              <div>
+                <h3>Production Manager, National Commercial Painting Franchisor</h3>
+                <p>Ran production on the franchisor's commercial projects for a Fortune 500 national retailer, from scheduling and crew coordination through completion.</p>
+              </div>
+            </div>
+            <div class="xp-item">
+              <span class="yr">2024–2026</span>
+              <div>
+                <h3>Commercial Billing &amp; GC Coordination</h3>
+                <p>Managed schedule-of-values billing and day-to-day coordination with general contractors on commercial jobs.</p>
+              </div>
+            </div>
+            <div class="xp-item">
+              <span class="yr">2026</span>
+              <div>
+                <h3>Commercial Facility Project, Superior, WI / Duluth, MN</h3>
+                <p>Led on-site execution of a large commercial building project covering roughly 59,000 sq ft of exterior and 250,000+ sq ft of interior surfaces.</p>
+              </div>
+            </div>
+          </div>
+          <p class="xp-note">Cindr Group is new to federal contracting and is building its past performance record. We welcome teaming and subcontracting opportunities with prime contractors.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="company" class="data">
     <div class="wrap">
       <div class="section-head">
@@ -306,6 +356,7 @@
           </td></tr>
           <tr><th>PSC</th><td>V231 · Lodging, Hotel/Motel</td></tr>
           <tr><th>Invoicing</th><td>Wide Area Workflow (WAWF / PIEE)</td></tr>
+          <tr><th>Teaming</th><td>Open to teaming and subcontracting with prime contractors</td></tr>
         </table>
       </div>
       <p class="verify">Registration can be verified on <a href="https://sam.gov/search/?keywords=Y7DQEFDR9S95" target="_blank" rel="noopener">SAM.gov</a> by UEI.</p>
@@ -316,7 +367,7 @@
     <div class="wrap contact-grid">
       <div>
         <h2>Contact</h2>
-        <p style="color:var(--ink-2);max-width:44ch;margin:0">For quotes, teaming inquiries, or questions about a requirement, reach out directly.</p>
+        <p style="color:var(--ink-2);max-width:44ch;margin:0">For quotes, teaming and subcontracting inquiries, or questions about a requirement, reach out directly.</p>
       </div>
       <div class="contact-card">
         <p class="who">Alex Bonds</p>

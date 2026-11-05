@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cindr Group LLC | Federal Lodging &amp; Logistics Support</title>
+<meta name="description" content="Cindr Group LLC is a Utah-based small business providing long-term lodging, travel arrangements, and procurement support to federal agencies. UEI Y7DQEFDR9S95 · CAGE 26BS2.">
+<meta property="og:title" content="Cindr Group LLC">
+<meta property="og:description" content="Long-term lodging, travel arrangements, and procurement support for federal missions.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://cindrgroup.com">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #141414;
+    --ink-2: #3d3d3d;
+    --muted: #6b6b6b;
+    --line: #e2e0dc;
+    --paper: #ffffff;
+    --paper-2: #f6f5f2;
+    --ember: #b8410f;
+    --max: 1080px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--paper); color: var(--ink);
+    font: 16px/1.6 Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; }
+  .wrap { max-width: var(--max); margin: 0 auto; padding-inline: 24px; }
+
+  /* Header */
+  header { border-bottom: 1px solid var(--line); position: sticky; top: 0; background: rgba(255,255,255,.94); backdrop-filter: blur(6px); z-index: 10; }
+  .nav { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 16px; }
+  .brand { font-weight: 700; letter-spacing: .08em; font-size: 15px; text-decoration: none; display: flex; align-items: center; gap: 10px; }
+  .brand .mark { width: 10px; height: 10px; background: var(--ember); display: inline-block; }
+  .nav ul { list-style: none; display: flex; gap: 28px; margin: 0; padding: 0; font-size: 14px; }
+  .nav ul a { text-decoration: none; color: var(--ink-2); }
+  .nav ul a:hover { color: var(--ink); }
+  @media (max-width: 640px) { .nav ul { display: none; } }
+
+  /* Hero */
+  .hero { padding-block: 96px 80px; border-bottom: 1px solid var(--line); }
+  .eyebrow { font-size: 12px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin: 0 0 20px; }
+  h1 { font-family: Newsreader, Georgia, serif; font-weight: 400; font-size: clamp(38px, 6vw, 64px); line-height: 1.08; letter-spacing: -.01em; margin: 0 0 24px; max-width: 16ch; text-wrap: balance; }
+  .lede { font-size: 18px; color: var(--ink-2); max-width: 58ch; margin: 0 0 36px; }
+  .actions { display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn { display: inline-block; padding: 12px 22px; font-size: 14px; font-weight: 600; text-decoration: none; border: 1px solid var(--ink); }
+  .btn.primary { background: var(--ink); color: #fff; }
+  .btn.primary:hover { background: #000; }
+  .btn.ghost:hover { background: var(--paper-2); }
+  .ids { margin-top: 48px; display: flex; gap: 32px; flex-wrap: wrap; font-size: 13px; color: var(--muted); }
+  .ids b { color: var(--ink); font-weight: 600; font-variant-numeric: tabular-nums; }
+
+  /* Sections */
+  section { padding-block: 80px; border-bottom: 1px solid var(--line); }
+  h2 { font-family: Newsreader, Georgia, serif; font-weight: 400; font-size: clamp(28px, 4vw, 38px); line-height: 1.15; margin: 0 0 12px; text-wrap: balance; }
+  .section-head { display: grid; grid-template-columns: 1fr 2fr; gap: 40px; margin-bottom: 48px; }
+  .section-head p { margin: 0; color: var(--ink-2); max-width: 60ch; }
+  @media (max-width: 760px) { .section-head { grid-template-columns: 1fr; gap: 8px; } }
+
+  /* Capabilities */
+  .featured { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; padding: 40px; background: var(--paper-2); border-left: 3px solid var(--ember); margin-bottom: 40px; }
+  .featured h3 { font-size: 22px; margin: 0 0 12px; font-weight: 600; }
+  .featured p { margin: 0; color: var(--ink-2); }
+  .featured ul { margin: 0; padding: 0; list-style: none; }
+  .featured li { padding: 9px 0; border-bottom: 1px solid var(--line); font-size: 15px; }
+  .featured li:last-child { border-bottom: 0; }
+  .tag { display: inline-block; font-size: 11px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--ember); margin-bottom: 10px; }
+  .caps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 1px solid var(--ink); }
+  .cap { padding: 28px 28px 8px 0; }
+  .cap + .cap { padding-left: 28px; border-left: 1px solid var(--line); }
+  .cap h3 { font-size: 17px; font-weight: 600; margin: 0 0 8px; }
+  .cap p { margin: 0 0 12px; color: var(--ink-2); font-size: 15px; }
+  .code { font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+  @media (max-width: 760px) {
+    .featured { grid-template-columns: 1fr; gap: 24px; padding: 28px 22px; }
+    .caps { grid-template-columns: 1fr; }
+    .cap, .cap + .cap { padding: 24px 0 8px; border-left: 0; border-bottom: 1px solid var(--line); }
+  }
+
+  /* Approach */
+  .approach { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; }
+  .approach .n { font-family: Newsreader, Georgia, serif; font-size: 28px; color: var(--ember); line-height: 1; margin-bottom: 14px; }
+  .approach h3 { font-size: 16px; font-weight: 600; margin: 0 0 8px; }
+  .approach p { margin: 0; font-size: 15px; color: var(--ink-2); }
+  @media (max-width: 860px) { .approach { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 520px) { .approach { grid-template-columns: 1fr; } }
+
+  /* Company data */
+  .data { background: var(--paper-2); }
+  .table-wrap { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 15px; }
+  th, td { text-align: left; padding: 14px 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { width: 34%; font-weight: 500; color: var(--muted); padding-right: 24px; }
+  td { font-variant-numeric: tabular-nums; }
+  td .row { display: block; padding: 2px 0; }
+  .verify { margin-top: 20px; font-size: 14px; color: var(--muted); }
+
+  /* Contact */
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+  .contact-card { border-top: 1px solid var(--ink); padding-top: 24px; }
+  .contact-card .who { font-weight: 600; font-size: 18px; margin: 0; }
+  .contact-card .role { color: var(--muted); margin: 0 0 20px; }
+  .contact-card a { text-decoration: none; border-bottom: 1px solid var(--line); }
+  .contact-card a:hover { border-color: var(--ink); }
+  .contact-card p { margin: 6px 0; }
+  @media (max-width: 760px) { .contact-grid { grid-template-columns: 1fr; gap: 24px; } }
+
+  footer { padding-block: 32px; font-size: 13px; color: var(--muted); }
+  footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top"><span class="mark" aria-hidden="true"></span>CINDR GROUP</a>
+    <ul>
+      <li><a href="#capabilities">Capabilities</a></li>
+      <li><a href="#approach">Approach</a></li>
+      <li><a href="#company">Company Data</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Federal Contracting · Salt Lake Valley, Utah</p>
+      <h1>Lodging and logistics support for federal missions.</h1>
+      <p class="lede">Cindr Group LLC is a Utah-based small business that provides long-term lodging, travel arrangements, and procurement support to government agencies, with one accountable point of contact from quote to closeout.</p>
+      <div class="actions">
+        <a class="btn primary" href="#contact">Contact Us</a>
+        <a class="btn ghost" href="#company">Company Data</a>
+      </div>
+      <div class="ids">
+        <span>UEI <b>Y7DQEFDR9S95</b></span>
+        <span>CAGE <b>26BS2</b></span>
+        <span>Primary NAICS <b>721110</b></span>
+        <span><b>Small Business</b></span>
+      </div>
+    </div>
+  </div>
+
+  <section id="capabilities">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Capabilities</h2>
+        <p>We source, verify, and manage the commercial resources agencies need, and we hold ourselves to the requirements in every statement of work.</p>
+      </div>
+
+      <div class="featured">
+        <div>
+          <span class="tag">Core Service</span>
+          <h3>Long-Term Lodging &amp; Corporate Housing</h3>
+          <p>Fully furnished, single-occupancy apartments and extended-stay lodging for personnel on temporary duty or temporary change of station. We secure properties close to the installation, confirm every unit against the government's requirements, and manage the account so the agency deals with one contractor instead of several landlords.</p>
+          <p class="code" style="margin-top:14px">NAICS 721110 · 531110 · PSC V231</p>
+        </div>
+        <ul>
+          <li>Furnished one-bedroom units near the installation</li>
+          <li>All utilities and high-speed internet included</li>
+          <li>On-site parking and in-unit or on-site laundry</li>
+          <li>Units verified against each technical exhibit</li>
+          <li>Flexible activation and release to match mission needs</li>
+          <li>Consolidated monthly invoicing through WAWF</li>
+        </ul>
+      </div>
+
+      <div class="caps">
+        <div class="cap">
+          <h3>Travel &amp; Lodging Arrangements</h3>
+          <p>Booking and coordination of lodging for traveling personnel and teams, within per diem and policy limits.</p>
+          <span class="code">NAICS 561510 · 561599</span>
+        </div>
+        <div class="cap">
+          <h3>Logistics &amp; Procurement Sourcing</h3>
+          <p>Sourcing equipment, kits, and materials from authorized suppliers, with documented pricing and delivery plans.</p>
+          <span class="code">NAICS 541614 · 532490</span>
+        </div>
+        <div class="cap">
+          <h3>Management Consulting</h3>
+          <p>Operations and project management support for administrative and logistics-heavy requirements.</p>
+          <span class="code">NAICS 541611</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="approach">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>How we work</h2>
+        <p>Small enough to be accountable, structured to meet federal requirements.</p>
+      </div>
+      <div class="approach">
+        <div>
+          <div class="n">01</div>
+          <h3>One point of contact</h3>
+          <p>A single accountable contact handles coordination, issues, and invoicing.</p>
+        </div>
+        <div>
+          <div class="n">02</div>
+          <h3>Requirements first</h3>
+          <p>Every property and product is checked against the solicitation before we quote it.</p>
+        </div>
+        <div>
+          <div class="n">03</div>
+          <h3>Local presence</h3>
+          <p>Based in the Salt Lake Valley, near Camp W.G. Williams and Salt Lake City.</p>
+        </div>
+        <div>
+          <div class="n">04</div>
+          <h3>Flexible by design</h3>
+          <p>Agreements built to scale up or down as the government's needs change.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="company" class="data">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Company data</h2>
+        <p>Registration details for contracting officers and prime contractors.</p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <tr><th>Legal name</th><td>Cindr Group LLC</td></tr>
+          <tr><th>UEI</th><td>Y7DQEFDR9S95</td></tr>
+          <tr><th>CAGE code</th><td>26BS2</td></tr>
+          <tr><th>SAM.gov status</th><td>Active registration</td></tr>
+          <tr><th>Business size</th><td>Small Business</td></tr>
+          <tr><th>Entity type</th><td>Limited Liability Company (Wyoming), registered in Utah</td></tr>
+          <tr><th>NAICS codes</th><td>
+            <span class="row">721110 · Hotels and Motels (primary)</span>
+            <span class="row">531110 · Lessors of Residential Buildings and Dwellings</span>
+            <span class="row">561510 · Travel Agencies</span>
+            <span class="row">561599 · All Other Travel Arrangement and Reservation Services</span>
+            <span class="row">541614 · Process, Physical Distribution, and Logistics Consulting</span>
+            <span class="row">541611 · Administrative and General Management Consulting</span>
+            <span class="row">532490 · Other Commercial and Industrial Machinery and Equipment Rental</span>
+          </td></tr>
+          <tr><th>PSC</th><td>V231 · Lodging, Hotel/Motel</td></tr>
+          <tr><th>Invoicing</th><td>Wide Area Workflow (WAWF / PIEE)</td></tr>
+        </table>
+      </div>
+      <p class="verify">Registration can be verified on <a href="https://sam.gov/search/?keywords=Y7DQEFDR9S95" target="_blank" rel="noopener">SAM.gov</a> by UEI.</p>
+    </div>
+  </section>
+
+  <section id="contact" style="border-bottom:0">
+    <div class="wrap contact-grid">
+      <div>
+        <h2>Contact</h2>
+        <p style="color:var(--ink-2);max-width:44ch;margin:0">For quotes, teaming inquiries, or questions about a requirement, reach out directly.</p>
+      </div>
+      <div class="contact-card">
+        <p class="who">Alex Bonds</p>
+        <p class="role">Managing Director</p>
+        <p><a href="mailto:alex@cindrgroup.com">alex@cindrgroup.com</a></p>
+        <p><a href="tel:+18479465783">(847) 946-5783</a></p>
+        <p style="color:var(--muted)">Midvale, Utah</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Cindr Group LLC</span>
+    <span>UEI Y7DQEFDR9S95 · CAGE 26BS2</span>
+  </div>
+</footer>
+
+</body>
+</html>

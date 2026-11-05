@@ -99,9 +99,15 @@
   @media (max-width: 900px) { .bmain { grid-template-columns: 1fr; align-items: start; gap: 36px; } }
   @media (prefers-reduced-motion: reduce) { .bh1 .l > span, .bside, .bfoot { animation: none; } }
 
-  .ember-mark { position: absolute; right: -6vw; bottom: -14vh; width: min(62vw, 760px); height: auto; pointer-events: none; opacity: .07; z-index: 0; }
   .bold > .wrap { z-index: 1; }
-  @media (max-width: 900px) { .ember-mark { right: -30vw; bottom: -6vh; width: 120vw; opacity: .06; } }
+  .bold::after { content: ""; position: absolute; left: -10%; right: -10%; bottom: -1px; height: 70%; pointer-events: none; z-index: 0;
+      background:
+        radial-gradient(60% 55% at 72% 100%, rgba(232,100,42,.30), rgba(232,100,42,0) 70%),
+        radial-gradient(45% 40% at 30% 100%, rgba(184,65,15,.20), rgba(184,65,15,0) 70%),
+        radial-gradient(90% 30% at 50% 100%, rgba(255,140,60,.10), rgba(255,140,60,0) 80%);
+      animation: smolder 9s ease-in-out infinite alternate; }
+  @keyframes smolder { from { opacity: .85; } to { opacity: 1; } }
+  @media (prefers-reduced-motion: reduce) { .bold::after { animation: none; } }
   .data th { color: var(--muted); }
   h2 { font-family: "Barlow Condensed", Impact, sans-serif !important; font-weight: 800 !important; text-transform: uppercase; letter-spacing: 0; font-size: clamp(34px, 4.6vw, 52px) !important; line-height: .95 !important; }
   .approach .n { font-family: "Barlow Condensed", Impact, sans-serif !important; font-weight: 800; font-size: 34px !important; }
@@ -168,11 +174,6 @@
 <body>
 
 <div class="bold" id="top">
-  <svg class="ember-mark" viewBox="0 0 400 520" fill="none" aria-hidden="true">
-    <path d="M200 10 C 230 110, 340 170, 340 310 C 340 410, 278 500, 200 510 C 122 500, 60 410, 60 310 C 60 230, 110 190, 130 120 C 150 175, 168 200, 190 210 C 175 140, 180 70, 200 10 Z" stroke="#e8642a" stroke-width="3"/>
-    <path d="M205 190 C 225 250, 285 285, 285 360 C 285 425, 248 468, 200 472 C 152 468, 115 425, 115 360 C 115 318, 140 292, 152 255 C 165 290, 178 305, 196 312 C 186 270, 190 230, 205 190 Z" stroke="#e8642a" stroke-width="3"/>
-    <path d="M202 340 C 214 372, 244 390, 244 425 C 244 450, 225 466, 200 467 C 175 466, 156 450, 156 425 C 156 398, 180 380, 202 340 Z" fill="#e8642a"/>
-  </svg>
   <div class="wrap bnav">
     <a class="blogo" href="#top">Cindr<span>Group</span></a>
     <ul>
